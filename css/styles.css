@@ -1,0 +1,1130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --sidenav-shift: 0px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--black);
+  font-family: Roboto Mono, sans-serif;
+  background-size: cover;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Headings */
+h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.small-sized-h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.title-header {
+  margin-left: 35px;
+  line-height: 0.99;
+}
+
+/* Paragraphs */
+.p1 .text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.p2 {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.p3 {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Links - No additional styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.a-button {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+/* Buttons */
+button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Inputs */
+/* Inputs and Textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: var(--grey-02);
+  font-weight: 200;
+  font-size: 24px;
+  border-bottom: 1px solid var(--red-02);
+  margin-bottom: 50px;
+  outline: none;
+  font-family: "Roboto Mono", monospace;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  color: var(--yellow-01);
+  border-bottom: 1px solid var(--yellow-01);
+}
+
+/* Placeholder Styling */
+::placeholder {
+  font-weight: 200;
+  color: #E1D6C0;
+  font-family: "Roboto Mono", monospace;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Utility Background Colors */
+.bg-orange-02 {
+  background-color: var(--orange-02);
+}
+
+.bg-red-01 {
+  background-color: var(--red-01);
+}
+
+.bg-red-02 {
+  background-color: var(--red-02);
+}
+
+.bg-purple-01 {
+  background-color: var(--purple-01);
+}
+
+.bg-yellow-01 {
+  background-color: var(--yellow-01);
+}
+
+.bg-grey-02 {
+  background-color: var(--grey-02);
+}
+
+.bg-grey-01 {
+  background-color: var(--grey-01);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+/* Utility Text Colors */
+.text-orange-02 {
+  color: var(--orange-02);
+}
+
+.text-red-01 {
+  color: var(--red-01);
+}
+
+.text-red-02 {
+  color: var(--red-02);
+}
+
+.text-purple-01 {
+  color: var(--purple-01);
+}
+
+.text-yellow-01 {
+  color: var(--yellow-01);
+}
+
+.text-grey-02 {
+  color: var(--grey-02);
+}
+
+.text-grey-01 {
+  color: var(--grey-01);
+}
+
+.text-brown-01 {
+  color: var(--brown-01);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.bg-darkblack {
+  background-color: var(--darkblack);
+}
+
+.text-black-important {
+  color: var(--black) !important;
+}
+
+/*Utility Text Styles */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+/* Padding utility classes */
+.padding-top-xl {
+  padding-top: 150px !important;
+}
+
+.padding-bottom-xl {
+  padding-bottom: 150px !important;
+}
+
+.padding-top-l {
+  padding-top: 100px;
+}
+
+.padding-bottom-l {
+  padding-bottom: 100px !important;
+}
+
+.padding-top-m {
+  padding-top: 50px !important;
+}
+
+.padding-bottom-m {
+  padding-bottom: 50px !important;
+}
+
+.padding-top-s {
+  padding-top: 30px !important;
+}
+
+.padding-top-xs {
+  padding-top: 15px !important;
+}
+
+.padding-bottom-s {
+  padding-bottom: 30px !important;
+}
+
+.padding-side {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.padding-all {
+  padding: 20px !important;
+}
+
+.padding-all-s {
+  padding: 10px !important;
+}
+
+/* Margin utility classes */
+.margin-top-xl {
+  margin-top: 150px;
+}
+
+.margin-bottom-xl {
+  margin-bottom: 150px;
+}
+
+.margin-top-l {
+  margin-top: 100px;
+}
+
+.margin-bottom-l {
+  margin-bottom: 100px;
+}
+
+.margin-top-m {
+  margin-top: 50px;
+}
+
+.margin-bottom-m {
+  margin-bottom: 50px;
+}
+
+.margin-top-s {
+  margin-top: 30px;
+}
+
+.margin-bottom-s {
+  margin-bottom: 30px;
+}
+
+/* Grid Layouts */
+/*ROW=under, coulmn=next to*/
+.grid-1-row {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.grid-2-row {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.grid-3-row {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.grid-1-col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.grid-2-col-600max {
+  display: grid;
+  grid-template-columns: minmax(0, 40vw) minmax(auto, 600px);
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.grid-2-col-1fr-3fr {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 0.5rem;
+}
+
+.grid-2-col-3fr-1fr {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10rem;
+}
+
+.grid-3-col-2fr-3fr-1fr {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr;
+  gap: 1rem;
+}
+
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.grid-3-col-min-max {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: max(1rem, 5vw);
+}
+
+.grid-3-col-2fr-2fr-1fr {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  gap: 1rem;
+}
+
+/* Flex Layouts */
+.center-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+.center-horizontal-vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*body containers*/
+/*Header */
+header {
+  height: 10vh;
+  padding-top: 10vh;
+}
+
+/*Navigation */
+nav {
+  height: 10vh;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  border-bottom: 2px solid var(--red-01);
+}
+
+/* Remove all shifting logic - no longer needed */
+
+/* Allow scrollspy to control nav background via the bg-red-01 utility class */
+nav.bg-red-01 {
+  background-color: var(--red-01);
+}
+
+/* Optional: active link styling (scrollspy adds .is-active) */
+nav a.is-active {
+  text-decoration: underline;
+}
+
+/* Desktop nav scrollspy active state */
+header nav .nav-center a.active {
+  background: var(--red-01);
+  color: var(--white) !important;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+nav>span {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 180px;
+  height: auto;
+}
+
+/* Desktop navigation menu (centered) */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-center ul {
+  color: #121212;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: clamp(0px, 3vw, 40px);
+  /* Responsive gap Funktioniert nichtt!!!! */
+}
+
+.narrow-nav-hidden {
+  display: block;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 7px 10px;
+  font-size: 0.8rem !important;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* Auto-hide nav when scrolling stops */
+nav.nav-autohide {
+  transition: background-color 0.3s ease, transform 0.35s ease, opacity 0.35s ease;
+  will-change: transform, opacity;
+}
+
+nav.nav-autohide.is-hidden {
+  transform: translateY(-120%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*Work Around Für Gap In Nav When Space Runs Out*/
+@media (max-width: 995px) {
+  .nav-center ul {
+    font-size: 0.8rem !important;
+    gap: clamp(0px, 2vw, 20px) !important;
+  }
+
+}
+
+/*Work Around Für Gap In Nav When Space Runs Out even more lol #hackerman*/
+@media (max-width: 860px) {
+  .contact-button {
+    padding: 6px 9px;
+    font-size: 0.6rem !important;
+  }
+
+  .nav-center ul {
+    font-size: 0.8rem !important;
+    gap: clamp(0px, 1.5vw, 20px) !important;
+  }
+}
+
+/*Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100vh;
+  margin-top: -10vh;
+  padding-top: 10vh;
+  text-align: left;
+  background-image: url('../assets/backgrounds/dotted-background-white-thomas-buser.webp');
+  background-color: var(--white);
+}
+
+.hero-side-image {
+  /* Parallax is applied via ::before so it can “overflow” past the container */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+.hero-side-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  /* Keep the same initial background position as before */
+  background-image: url('../assets/backgrounds/hero-clouds-dotted-background-grey-with-swiss-flag.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+
+  /* Make it larger so shifting left can continue without exposing blank space */
+  width: 160%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+
+  /* JS updates this variable; starts at 0px so initial position is unchanged */
+  transform: translate3d(var(--hero-parallax-x, 0px), 0, 0);
+  will-change: transform;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-side-image img {
+  max-width: min(80vw, 1100px);
+  height: auto;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: flex-start;
+}
+
+.hero-footer {
+  margin-bottom: 2rem;
+}
+
+.flags {
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+/*Services Section */
+.services article {
+  height: 100%;
+}
+
+.services {
+  --services-bg: url('../assets/backgrounds/services-bg-thomas-buser.webp');
+  --services-parallax: 0px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--services-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translate3d(0, var(--services-parallax), 0) scale(1.12);
+  will-change: transform;
+  z-index: 1;
+}
+
+.services::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 12px 18px -16px rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+
+.services>* {
+  position: relative;
+  z-index: 3;
+}
+
+.services-flags {
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.bubble {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(336deg, rgba(235, 71, 59, 1) 0%, rgba(235, 71, 59, 0) 30%, rgba(235, 71, 59, 0) 60%, rgba(235, 71, 59, 1) 100%) border-box;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  margin-bottom: 35px;
+  margin-left: 35px;
+  max-width: 600px;
+  padding: 15px;
+}
+
+.bubble-number {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-text img {
+  display: block;
+}
+
+.icon-small {
+  width: 22px;
+  height: auto;
+}
+
+.portfolio {
+  background-image:
+    linear-gradient(to bottom,
+      rgba(18, 18, 18, 0) 0%,
+      rgba(18, 18, 18, 0) 12%,
+      rgba(18, 18, 18, 0.35) 28%,
+      rgba(18, 18, 18, 0.75) 45%,
+      #121212 62%,
+      #121212 100%),
+    url('../assets/backgrounds/dotted-background-dark-thomas-buser.webp');
+}
+
+/*About Section*/
+.about {
+  background-image: url('../assets/backgrounds/dotted-background-white-thomas-buser.webp');
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 -2px 16px 5px rgba(0, 0, 0, 0.30);
+  border-radius: 20px;
+  margin-top: -50px;
+}
+
+/*AI Section */
+.ai-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-square {
+  background-image: url('../assets/backgrounds/technology-card-bg-thomas-buser.webp');
+  padding: 50px 55px 40px 55px;
+  border-radius: 30px;
+  max-width: 1750px;
+  min-width: 250px;
+  opacity: 0.5;
+  transition: opacity 0.15s linear, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.ai-square * {
+  transition: opacity 0.15s linear;
+}
+
+.ai-square.is-visible {
+  opacity: 1;
+  border: 0.5px solid rgba(123, 112, 228, 0.5);
+  box-shadow: 0 0 10px 3px rgba(123, 112, 228, 0.5);
+}
+
+.ai-icon img {
+  transition: filter 0.25s ease;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+/* Testimonials Section */
+.testemonials {
+  background-image: url('../assets/backgrounds/dotted-background-white-thomas-buser.webp');
+}
+
+.testimonials-title {
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.desktop-hidden {
+  display: none !important;
+}
+
+.mobile-hidden {
+  display: block;
+}
+
+.overlay-text h2 {
+  margin: 0;
+  font-size: 12px;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+/* Impressum/Privacy Page */
+.impressum-background {
+  margin: 5% 20%;
+  background-color: rgba(245, 243, 239, 0.8);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.shifted .impressum-nav {
+  margin-top: -5%;
+}
+
+/* Keep body clean - no transform on body itself */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 800px) {
+  nav {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  #menu-toggle {
+    justify-self: end;
+  }
+
+  nav>span:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .small-sized-h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .p1 .text {
+    font-size: 1rem;
+  }
+
+  .desktop-hidden {
+    display: block !important;
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+
+  .padding-mobile-none {
+    padding: 0 !important;
+  }
+
+  .padding-side {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .padding-mobile-top-xl {
+    padding-top: 80px !important;
+  }
+
+  .padding-mobile-top-l {
+    padding-top: 50px !important;
+  }
+
+  .padding-mobile-top-m {
+    padding-top: 15px !important;
+  }
+
+  .padding-mobile-top-s {
+    padding-top: 5px !important;
+  }
+
+  .padding-mobile-bottom-l {
+    padding-bottom: 50px !important;
+  }
+
+  .padding-mobile-bottom-m {
+    padding-bottom: 15px !important;
+  }
+
+  .padding-mobile-bottom-s {
+    padding-bottom: 5px !important;
+  }
+
+  .padding-mobile-side-m {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+
+  .padding-mobile-side-l {
+    padding-left: 45px !important;
+    padding-right: 45px !important;
+  }
+
+  .margin-mobile-right-m {
+    margin-right: 15px !important;
+  }
+
+  .margin-mobile-left-m {
+    margin-left: 15px !important;
+  }
+
+  .grid-mobile-1-row {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+
+  .grid-mobile-2-row {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .grid-mobile-3-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .grid-mobile-1-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .grid-mobile-1-col-big-gap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .grid-mobile-2-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .grid-mobile-2-col-1fr-3fr {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0.5rem;
+  }
+
+  .grid-mobile-2-col-3fr-1fr {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 10rem;
+  }
+
+  .grid-mobile-3-col-2fr-3fr-1fr {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    gap: 1rem;
+  }
+
+  .grid-mobile-3-col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .grid-mobile-3-col-2fr-2fr-1fr {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 1rem;
+  }
+
+  .text-mobile-left {
+    text-align: left;
+  }
+
+  .text-mobile-center {
+    text-align: center;
+  }
+
+  .text-mobile-right {
+    text-align: right;
+  }
+
+  .center-mobile-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .center-mobile-horizontal {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .center-mobile-horizontal-vertical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .width-mobile-100 {
+    width: 100%;
+  }
+
+  .hero-side-image {
+    left: 50%;
+    right: auto;
+    bottom: 3.5rem;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  .hero-side-image::before {
+    background-position: center bottom;
+  }
+
+  .hero-side-image,
+  .hero-side-image img {
+    max-height: 50vh !important;
+  }
+
+  .hero-footer {
+    margin-bottom: 0rem;
+  }
+
+  .hero-mobile-workaround {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95vw;
+    box-sizing: border-box;
+  }
+
+  /* Ensure hero content is aligned to the top with spacing on mobile */
+  .hero-content {
+    justify-content: flex-start;
+    padding-top: 100px;
+  }
+
+  .services {
+    --services-bg: url('../assets/backgrounds/services-mob-bg-thomas-buser.webp');
+  }
+
+  .services article {
+    height: auto;
+  }
+
+  .services-flags {
+    margin-bottom: 15px;
+  }
+
+  .bubble {
+    max-width: auto;
+    margin-right: 35px;
+  }
+
+
+
+  .ai-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ai-square {
+    padding: 30px 35px 20px 35px;
+    border-radius: 30px;
+    border: 1px solid transparent;
+  }
+
+  #contact {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .impressum-background {
+    margin: 5% 5% !important;
+  }
+
+  .hero-side-image img {
+    max-width: 100vw;
+    opacity: 0.25;
+  }
+}

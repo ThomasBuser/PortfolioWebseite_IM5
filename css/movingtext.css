@@ -1,0 +1,39 @@
+.scroll-line {
+    white-space: nowrap;
+    width: 100%;
+}
+
+.scroll-line span {
+    display: inline-block;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.scroll-line[data-direction="left"] span {
+    animation-name: scroll-left;
+}
+
+.scroll-line[data-direction="right"] span {
+    animation-name: scroll-right;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
