@@ -935,8 +935,8 @@ body.menu-open {
     padding-left: 15px;
     padding-right: 15px;
   }
-   .padding-mobile-right-0{
-    padding-right: 0px !important;
+   .padding-right{
+    padding-right: 0px;
    }
 
    .extra-padding-mobile{
@@ -1145,7 +1145,12 @@ body.menu-open {
     margin-right: 35px;
   }
 
-
+.about-me-image {
+    min-width: 250px;
+    max-width: 45vw;
+    height: auto;
+    margin-bottom: 20px;
+  }
 
   .ai-section {
     position: relative;
