@@ -1,4 +1,4 @@
-# JavaScript Functionality Overview
+# Thomas Buser Portfolio Website
 
 This project is a personal portfolio website for **Thomas Buser**. The website showcases selected projects, professional information, and provides a contact form. A strong focus lies on modern UI/UX, smooth animations, and interactive elements. JavaScript and CSS are used extensively to handle navigation behavior, animations, scrolling effects, and user interactions across both desktop and mobile devices.
 
@@ -118,3 +118,4 @@ The codebase is structured in a modular way, with individual scripts handling sp
 - The website is optimized for both desktop and mobile experiences  
 - Animations and parallax effects are primarily scroll-based and performance-aware  
 - The project serves both as a portfolio and a technical playground for experimenting with modern frontend techniques
+
