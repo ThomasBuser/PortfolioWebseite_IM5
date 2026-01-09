@@ -337,6 +337,9 @@ button {
   padding-left: 70px;
   padding-right: 70px;
 }
+.padding-right{
+  padding-right: 70px;
+}
 
 .padding-all {
   padding: 20px !important;
@@ -785,7 +788,13 @@ nav.nav-autohide.is-hidden {
   border-radius: 20px;
   margin-top: -50px;
 }
-
+.about-me-image {
+  
+  border-radius: 500px;
+  min-width: 350px;
+  max-width: 35vw;
+  height: auto;
+}
 /*AI Section */
 .ai-section {
   position: relative;
@@ -926,7 +935,14 @@ body.menu-open {
     padding-left: 15px;
     padding-right: 15px;
   }
+   .padding-mobile-right-0{
+    padding-right: 0px !important;
+   }
 
+   .extra-padding-mobile{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+   }
   .padding-mobile-top-xl {
     padding-top: 80px !important;
   }
