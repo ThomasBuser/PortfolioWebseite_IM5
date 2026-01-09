@@ -33,6 +33,8 @@ function handleNavScroll() {
             link.style.setProperty('color', '#000', 'important');
         });
         document.getElementById('language-select').style.color = '#000'; //astarlab
+        const langArrow = document.querySelector('.language-select-wrapper .material-symbols-outlined');
+        if (langArrow) langArrow.style.color = '#000';
         return; //astarlab stop further scroll logic
     } //astarlab
 
@@ -51,6 +53,8 @@ function handleNavScroll() {
         nav.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
         logo.src = darkLogo;
         document.getElementById('language-select').style.color = 'var(--brown-01)';
+        const langArrow = document.querySelector('.language-select-wrapper .material-symbols-outlined');
+        if (langArrow) langArrow.style.color = 'var(--brown-01)';
         setMenuColor('var(--brown-01)');
         document.querySelectorAll('.center-horizontal-vertical li a:not(.active)').forEach(link => {
             link.style.setProperty('color', '#000', 'important');
@@ -60,6 +64,8 @@ function handleNavScroll() {
         logo.src = defaultLogo;
         setMenuColor('');
         document.getElementById('language-select').style.color = '#efefef';
+        const langArrow = document.querySelector('.language-select-wrapper .material-symbols-outlined');
+        if (langArrow) langArrow.style.color = '#efefef';
         document.querySelector('.center-horizontal-vertical').style.color = '#efefef';
         document.querySelectorAll('.center-horizontal-vertical li a:not(.active)').forEach(link => {
             link.style.setProperty('color', '#efefef', 'important');
@@ -70,3 +76,23 @@ function handleNavScroll() {
 window.addEventListener('scroll', handleNavScroll);
 window.addEventListener('DOMContentLoaded', handleNavScroll);
 handleNavScroll();
+
+// Remove hash from URL after clicking internal anchor links
+function removeHashFromUrl() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', () => {
+            // Delay to allow default scroll behavior
+            setTimeout(() => {
+                if (history.replaceState) {
+                    history.replaceState(null, document.title, window.location.pathname + window.location.search);
+                }
+            }, 10);
+        });
+    });
+}
+
+window.addEventListener('DOMContentLoaded', removeHashFromUrl);
+
+
+
+

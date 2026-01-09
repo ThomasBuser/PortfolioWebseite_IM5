@@ -4,6 +4,34 @@ html {
   scroll-behavior: smooth;
 }
 
+
+/* Prevent horizontal “side scroll” caused by overflowing elements */
+
+/* Prevent horizontal “side scroll” only inside the contact and testimonials section */
+.contact,
+.testemonials {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Prefer clipping when supported (avoids creating a horizontal scrollbar entirely) */
+@supports (overflow: clip) {
+  .contact,
+  .testemonials {
+    overflow-x: clip;
+  }
+}
+
+
+/* Media elements should never exceed the viewport width */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
 :root {
   --sidenav-shift: 0px;
 }
@@ -15,7 +43,6 @@ body {
   font-family: Roboto Mono, sans-serif;
   background-size: cover;
   height: 100vh;
-  overflow-x: hidden;
 }
 
 footer {
@@ -455,6 +482,7 @@ header {
 /*Navigation */
 nav {
   height: 10vh;
+  min-height: 70px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -1081,7 +1109,7 @@ body.menu-open {
   /* Ensure hero content is aligned to the top with spacing on mobile */
   .hero-content {
     justify-content: flex-start;
-    padding-top: 100px;
+    padding-top: 70px;
   }
 
   .services {
